@@ -1,0 +1,21 @@
+{
+  "name": "local-require",
+  "version": "0.0.0",
+  "description": "access local module using require",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/test.js"
+  },
+  "keywords": [
+    "require",
+    "module"
+  ],
+  "author": "Chetan Dhembre <chetandhembre@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tap": "^0.4.8"
+  },
+  "dependencies": {
+    "parentpath": "^0.2.0"
+  }
+}
