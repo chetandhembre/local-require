@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "description": "access local module using require",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chetandhembre/local-require.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chetandhembre/local-require/issues"
+  },
+  "homepage": "https://github.com/chetandhembre/local-require",
   "scripts": {
     "test": "tap test/test.js"
   },
