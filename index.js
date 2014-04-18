@@ -55,7 +55,11 @@ var getUserHome = function () {
 };
 
 
-
+/**
+ * use to
+ * @param registerMap
+ * @param callback
+ */
 var register = function (registerMap, callback) {
     if (typeof registerMap !== 'object') {
         if (callback) {
@@ -66,15 +70,63 @@ var register = function (registerMap, callback) {
 
     var nodeModulePath = getNearestNodeModulePath();
 
+
+};
+
+/**
+ * check if app is registered or not
+ * @param nodeModulePath
+ * @param appName
+ * @param callback
+ */
+var checkIfAppRegistered = function(nodeModulePath, appName, callback) {
+    fs.exists(path.resolve(nodeModulePath, appName), function(presnet) {
+        callback(null, presnet);
+    });
+};
+
+/**
+ * register app
+ * @param app
+ * @param callback
+ */
+var registerApp = function (app, callback) {
+    if (typeof app !== 'string') {
+        if (callback) {
+            callback('app name should be string');
+        }
+        return;
+    }
+
+    var nodeModulePath = getNearestNodeModulePath();
+
+
     if (!nodeModulePath) {
         createNodeModuleDir(function (err, response) {
             if (err) {
                 callback(err);
             }
-
         });
     }
+
+    checkIfAppRegistered(nodeModulePath, app, function (err, present) {
+        if (err || present) {
+            callback('app name is already present');
+        } else {
+            fs.mkdir(path.resolve(nodeModulePath, app), function (err, response) {
+                if (err) {
+                    callback(err);
+                } else {
+                    //do stuff
+                }
+            });
+        }
+    });
+
+
 };
+
+exports.registerApp = registerApp;
 
 exports.register = register;
 
