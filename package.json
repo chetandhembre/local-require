@@ -24,7 +24,6 @@
     "tap": "^0.4.8"
   },
   "dependencies": {
-    "async": "^0.7.0",
-    "underscore": "^1.6.0"
+    "async": "^0.7.0"
   }
 }
