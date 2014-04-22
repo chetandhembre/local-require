@@ -65,10 +65,10 @@ where ``opts`` is
 
 So  you can add ``f1.js`` from any part of codebase by  ``require('demo/f1')``. We can also use this method to include ``directory`` by ``require('demo/bar1')`` 
 
-Use of ``namespace`` here is just to segregate symboliclink files which will lead to maintanance.You can create any number of namespace just avoid conlicting name with previous namespace or install module name
+Use of ``namespace`` here is just to segregate symboliclink files which will lead to simple maintain.You can create any number of namespace just avoid conlicting name with previous namespace or installed package name
 
 # ToDo
-  - if you have use same namespace more than once last namespace options will override, which also means it will override any install package who has same name as your ``namespace`` we can handle these condition more civilized way.
+  - if you have use same namespace more than once, last namespace options will override, which also means it will override any install package who has same name as your ``namespace`` we can handle these condition more civilized way.
   
  
 # Contribution
