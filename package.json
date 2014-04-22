@@ -1,6 +1,6 @@
 {
   "name": "local-require",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "access local module using require as of they are core lib",
   "main": "index.js",
   "repository": {
